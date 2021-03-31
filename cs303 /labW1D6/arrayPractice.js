@@ -84,5 +84,8 @@ function evenAge(arr){
      let numberOfEven=oddAge(arr);
     return res/numberOfEven
   }
+  function multply(x,y,w){
+    return x*y*w
+  }
 
 

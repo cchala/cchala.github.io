@@ -129,4 +129,11 @@ it("sum odd age ", function () {
     assert.deepEqual(peopleArray,
         [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }]);
 });
+it("the thre variable like x*Y*Z",function(){
+    assert.deepEqual(multply(2,3,4),24)
+  })
 });
+
+// discribe("multply three elemnts", function(){
+   
+//   })
