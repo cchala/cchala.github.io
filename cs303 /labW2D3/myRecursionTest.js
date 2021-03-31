@@ -1,7 +1,9 @@
 //"use strict"
 // const assert = require("assert"); 
 // const myExports = require("./myRecursionTest.js");
-// const myMap = myExports.myMap;
+// const sumNumber = myExports.sumNumber;
+// const factorialNumber = myExports.factorialNumber;
+// const fabonnacci = myExports.fabonnacci;
 
 describe("Recursion and stack", function(){
    it("sum a given number utill one using recursion",function(){
