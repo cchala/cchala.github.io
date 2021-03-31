@@ -1,4 +1,4 @@
-"use strict"
+//"use strict"
  //module.exports = { oddValue, myMap, myreduce,myFilter,multiplyAll,sumValue, };
 /**
  * 
