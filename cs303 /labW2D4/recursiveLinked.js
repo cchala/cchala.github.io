@@ -15,7 +15,11 @@
 //     }
 //   };
 
-
+/**
+ * 
+ * @param {object} list 
+ * @return {string} returns string with out space
+ */
 function printList(list) {
 
 
@@ -28,7 +32,11 @@ function printList(list) {
 
 //console.log(printList(list))
 
-
+/**
+ * 
+ * @param {object} list 
+ * @return {string} strings
+ */
 function printListReverse(list) {
 
 
@@ -39,7 +47,9 @@ function printListReverse(list) {
 
 }
 //console.log(printListReverse(list))
-
+/**
+ * It is class
+ */
 class TreeNode {
     constructor(value) {
         this.value = value;
@@ -55,7 +65,11 @@ const maggie = new TreeNode('Maggie');
 
 abe.descendents.push(homer);
 homer.descendents.push(bart, lisa, maggie);
-
+/**
+ * 
+ * @param {object} node 
+ * @return {object}
+ */
 function printName(node) {
     console.log(node.value)
     if (node.descendents === []) {
@@ -71,7 +85,12 @@ function printName(node) {
 
 console.log(printName(abe));
 
-
+/**
+ * 
+ * @param {Object} node 
+ * @param {person} target 
+ * @return {boolean}
+ */
 function contains(node, target) {
 
     if (node.descendents === null) {
