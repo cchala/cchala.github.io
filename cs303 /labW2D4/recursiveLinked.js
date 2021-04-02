@@ -1,5 +1,5 @@
 //"use strict"
-//module.exports = {};
+//module.exports = {printList,printListReverse,};
 
 // let list = {
 //     name: "Chimdi",
