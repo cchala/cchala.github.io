@@ -120,23 +120,22 @@ function myFilterArra(arr,arr2,cbf) {
 // let final = arrForInArr.filter(result([3, 5, 8]))
 //console.log(myFilterArra(arrForInArr,[3, 5, 8],inArray));
 
-function makeArmy() {
-
+function byField(fieldName){
+    return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
+  }
+  /**
+   *
+   * @returns{Object} return array of function
+   */
+  function makeArmy() {
     let shooters = [];
-
-    for (let i = 0; i < 10; i++) {
-        let shooter = function () { 
-            //console.log(i); 
-        };
-        shooters.push(shooter);
+    for(let i = 0; i < 10; i++) {
+      let shooter = function() {
+        return i ;
+      };
+      shooters.push(shooter);
     }
-
     return shooters;
-}
-
-let army = makeArmy();
-
-army[0](); 
-army[5]();
+  }
 
 

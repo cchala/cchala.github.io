@@ -16,3 +16,67 @@ describe("filter a number between two values", function(){
 //      assert.deepEqual(fabonnacci(8),21)
 //  })
  })
+ 
+ let users = [
+    { name: "John", age: 20, surname: "Johnson" },
+    { name: "Pete", age: 18, surname: "Peterson" },
+    { name: "Ann", age: 19, surname: "Hathaway" },
+  ];
+
+  it("sorts users by name", function(){
+    let nameSortedKey = [
+      { name: "Ann", age: 19, surname: "Hathaway" },
+      { name: "John", age: 20, surname: "Johnson"},
+      { name: "Pete", age: 18, surname: "Peterson" },
+    ];
+    let nameSortedAnswer = users.sort(byField("name"));
+    assert.deepEqual(nameSortedKey, nameSortedAnswer);
+  });
+
+  it("sorts users by age", function(){
+    let ageSortedKey = [
+      { name: "Pete", age: 18, surname: "Peterson" },
+      { name: "Ann", age: 19, surname: "Hathaway" },
+      { name: "John", age: 20, surname: "Johnson"},
+    ];
+    let ageSortedAnswer = users.sort(byField("age"));
+    assert.deepEqual(ageSortedKey, ageSortedKey);
+  });
+
+  it("sorts users by surname", function(){
+    let surnameSortedKey = [
+      { name: "Ann", age: 19, surname: "Hathaway" },
+      { name: "John", age: 20, surname: "Johnson"},
+      { name: "Pete", age: 18, surname: "Peterson" },
+    ];
+    let surnameSortedAnswer = users.sort(byField("surname"));
+    assert.deepEqual(surnameSortedAnswer, surnameSortedKey);
+  });
+
+
+
+
+
+
+describe("army", function() {
+
+
+
+  let army;
+  
+  before(function() {
+    army = makeArmy();
+  });
+
+  it("army[0] shows 0", function() {
+    assert.deepEqual(army[0](),0);
+  });
+  
+  it("army[5] shows 5", function() {
+    army[5]();
+    assert.deepEqual(army[5](),5);
+  });
+
+
+
+});
