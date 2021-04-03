@@ -1,4 +1,5 @@
 "use strict"
+
 /**
  * 
  */
@@ -125,7 +126,7 @@ function makeArmy() {
 
     for (let i = 0; i < 10; i++) {
         let shooter = function () { 
-            console.log(i); 
+            //console.log(i); 
         };
         shooters.push(shooter);
     }
