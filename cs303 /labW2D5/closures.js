@@ -13,12 +13,12 @@ function makeCounter() {
    let counter = makeCounter();
    let counter2 = makeCounter();
     
-   console.log(counter()); // 0
-   console.log(counter()); // 1
-   console.log(counter()); // 2
+//    console.log(counter()); // 0
+//    console.log(counter()); // 1
+//    console.log(counter()); // 2
     
-   console.log(counter2()); // 0
-   console.log(counter2()); // 1
+//    console.log(counter2()); // 0
+//    console.log(counter2()); // 1
     
    //Yes, they have independent outer Lexical Environments, each one has its own count.
    // you 
@@ -27,7 +27,7 @@ function makeWorker() {
     let name = "Pete";
     
     return function() {
-    console.log(name);
+    //console.log(name);
     };
    }
     
@@ -53,9 +53,9 @@ function makeWorker() {
     
    let counter = new Counter();
     
-   console.log(counter.up()); // 1
-   console.log(counter.up()); // 2
-   console.log(counter.down()); // 1
+//    console.log(counter.up()); // 1
+//   console.log(counter.up()); // 2
+ //  console.log(counter.down()); // 1
     
    /*Both nested functions are created within the same outer Lexical Environment,
     so they share access to the same count variable.
@@ -65,7 +65,7 @@ if (true) {
  let user = "John";
  
  function sayHi() {
- console.log(`${phrase}, ${user}`);
+ //console.log(`${phrase}, ${user}`);
  }
 }
  
@@ -75,7 +75,7 @@ sayHi(); // error.
 let x = 1;
  
 function func() {
-console.log(x); // ?
+//console.log(x); // ?
 let x = 2;
 }
 func(); //error.....Cannot access 'x' before initialization.
