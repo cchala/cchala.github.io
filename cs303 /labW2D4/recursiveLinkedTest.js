@@ -27,4 +27,14 @@ describe("Recursion print of linked list", function(){
  it("Reverse name ",function(){
      assert.deepEqual(printListReverse(list),"MesayLuwamChalaChimdi")
  })
+ it("Find the node in the tree if it contains ",function(){
+  assert.deepEqual(contains(homer,"Maggie"),true)
+  assert.deepEqual(contains(homer,"Abe"),false)
+})
+it("Generate linked list",function(){
+  assert.deepEqual(allCaps(abe), {
+    value: 'Abe',
+    next:{ value: 'Homer', next:{ value: 'Bart', next: [Node] } }
+  })
+})
  })
