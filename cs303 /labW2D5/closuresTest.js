@@ -14,12 +14,11 @@ describe("filter a number between two values", function(){
     it("Filter array in array",function(){
      assert.deepEqual(myFilterArra(arr,[1, 2, 11],inArray),[ 1, 2])
  })
-//  it("Fibonacci numbers ",function(){
-//      assert.deepEqual(fabonnacci(8),21)
-//  })
+
  })
- 
- let users = [
+ let users;
+ describe("Sort by Name and age", function(){
+  users = [
     { name: "John", age: 20, surname: "Johnson" },
     { name: "Pete", age: 18, surname: "Peterson" },
     { name: "Ann", age: 19, surname: "Hathaway" },
@@ -54,7 +53,7 @@ describe("filter a number between two values", function(){
     let surnameSortedAnswer = users.sort(byField("surname"));
     assert.deepEqual(surnameSortedAnswer, surnameSortedKey);
   });
-
+})
 describe("army", function() {
   let army;
   

@@ -1,3 +1,5 @@
+
+
 /**
  * 2. Recall the bank question from the first exam. The transactionsDB is publicly accessible to any
 code that has access to the bank object. Write a makeBank function that will encapsulate and
@@ -8,7 +10,7 @@ makeBank function instead of a property on the bank object
 /**
  * @return {object} return the object or the banks
  */
-function bankAcount() {
+function makeBank() {
     const bank = {
     transactionsDB: [],
     };
@@ -16,7 +18,7 @@ function bankAcount() {
     return bank
     };
    }
-   let bankObj = bankAcount()();
+   let bankObj = makeBank()();
      bankObj.transactionsDB = [
     { customerId: 1, customerTransactions: [10, 50, -40] },
     { customerId: 2, customerTransactions: [10, 10, -10] },
@@ -73,8 +75,9 @@ bankObj.debit = function (id, amount) {
   }
  return bala;
 };
-// console.log(bankObj.debit(3,20))//35
-// console.log(bankObj.getBalance(3))
+console.log(bankObj.debit(3,20))//35
+console.log(bankObj.getBalance(3))
+console.log(bankObj.custId(3))
 
 bankObj.credit = function (id, amount) {
     let balance = this.getBalance(id);
@@ -97,11 +100,11 @@ bankObj.bankBalance = function () {
 
 };
 
- console.log("total balance should be 85: ", bankObj.bankBalance());
-bankObj.credit(1, 20);
-bankObj.debit(1, 1000);
-console.log("total should now be 105: ", bankObj.bankBalance());
+//  console.log("total balance should be 85: ", bankObj.bankBalance());
+// bankObj.credit(1, 20);
+// bankObj.debit(1, 1000);
+// console.log("total should now be 105: ", bankObj.bankBalance());
 
-console.log(bankObj.transactionsDB)
-console.log(bankObj.getBalance(3))
-console.log(bankObj.bankBalance())
+// console.log(bankObj.transactionsDB)
+// console.log(bankObj.getBalance(3))
+// console.log(bankObj.bankBalance())
