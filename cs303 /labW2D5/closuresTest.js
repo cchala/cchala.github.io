@@ -5,7 +5,6 @@
 //const myFilter=myExports.myFilter;
 //const myFilterArra=myExports.myFilterArra;
 //const makeArmy=myExports.makeArmy;
-myFilter,myFilterArra,byField,makeArmy
 let arr;
 describe("filter a number between two values", function(){
     it("sum a given number utill one using recursion",function(){
