@@ -2,7 +2,10 @@
 //const assert = require("assert"); 
 // const myExports = require("./recursiveLinkedTest.js");
 //const printListReverse=myExports.printListReverse;
-//const printList=myExports.printList;
+//const myFilter=myExports.myFilter;
+//const myFilterArra=myExports.myFilterArra;
+//const makeArmy=myExports.makeArmy;
+myFilter,myFilterArra,byField,makeArmy
 let arr;
 describe("filter a number between two values", function(){
     it("sum a given number utill one using recursion",function(){
@@ -53,15 +56,7 @@ describe("filter a number between two values", function(){
     assert.deepEqual(surnameSortedAnswer, surnameSortedKey);
   });
 
-
-
-
-
-
 describe("army", function() {
-
-
-
   let army;
   
   before(function() {
@@ -76,7 +71,5 @@ describe("army", function() {
     army[5]();
     assert.deepEqual(army[5](),5);
   });
-
-
 
 });
