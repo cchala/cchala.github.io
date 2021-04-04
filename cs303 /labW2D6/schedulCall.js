@@ -1,5 +1,61 @@
 
+/**
+ * 
+ * @param {number} start 
+ * @param {number} end 
+ */
+let printNumbers = (start, end) => {
+    setTimeout(() => console.log(start), 1000);
+    start < end && setTimeout(printNumbers, 1000, start + 1, end);
+   }
+    
+   printNumbers(5, 10);
+// the setTimeout will print the increamented number recursively.
+function printNumbers(from, to) {
+    let current = from;
+  
+    setTimeout(function go() {
+      console.log(current);
+      if (current < to) {
+        setTimeout(go, 1000);
+      }
+      current++;
+    }, 1000);
+  }
+  
+  // usage:
+  printNumbers(5, 10);
+  function printNumbers(from, to) {
+    let current = from;
+  
+    function go() {
+      console.log(current);
+      if (current == to) {
+        clearInterval(timerId);
+      }
+      current++;
+    }
+  
+    go();
+    let timerId = setInterval(go, 1000);
+  }
+  
+  printNumbers(5, 10);
 
+let i = 0;
+
+setTimeout(() => alert(i), 100); // 100000000
+
+// assume that the time to execute this function is >100ms
+for(let j = 0; j < 100000000; j++) {
+  i++;
+}
+/**
+ *   Any setTimeout will run only after the current code has finished.
+
+The i will be the last one: 100000000.
+
+ */
 /**
  * 2. Recall the bank question from the first exam. The transactionsDB is publicly accessible to any
 code that has access to the bank object. Write a makeBank function that will encapsulate and
@@ -100,11 +156,11 @@ bankObj.bankBalance = function () {
 
 };
 
-//  console.log("total balance should be 85: ", bankObj.bankBalance());
-// bankObj.credit(1, 20);
-// bankObj.debit(1, 1000);
-// console.log("total should now be 105: ", bankObj.bankBalance());
+ console.log("total balance should be 85: ", bankObj.bankBalance());
+bankObj.credit(1, 20);
+bankObj.debit(1, 1000);
+console.log("total should now be 105: ", bankObj.bankBalance());
 
-// console.log(bankObj.transactionsDB)
-// console.log(bankObj.getBalance(3))
-// console.log(bankObj.bankBalance())
+console.log(bankObj.transactionsDB)
+console.log(bankObj.getBalance(3))
+console.log(bankObj.bankBalance())
