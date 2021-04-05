@@ -1,4 +1,5 @@
-
+"use strict"
+//module.exports = {printNumbers,bankObj.custId,bankObj.saveTransaction,bankObj.debit,bankObj.bankBalance};
 /**
  * 
  * @param {number} start 
@@ -63,22 +64,22 @@ return the bank object. Make the transactionsDB private by making it a local var
 makeBank function instead of a property on the bank object
  */
 
-/**
- * @return {object} return the object or the banks
- */
-function makeBank() {
-    const bank = {
-    transactionsDB: [],
-    };
-    return function(){
-    return bank
-    };
-   }
-   let bankObj = makeBank()();
-     bankObj.transactionsDB = [
-    { customerId: 1, customerTransactions: [10, 50, -40] },
-    { customerId: 2, customerTransactions: [10, 10, -10] },
-    { customerId: 3, customerTransactions: [5, -5, 55] }];
+// /**
+//  * @return {object} return the object or the banks
+//  */
+// function makeBank() {
+//     const bank = {
+//     transactionsDB: [],
+//     };
+//     return function(){
+//     return bank
+//     };
+//    }
+//    let bankObj = makeBank()();
+//      bankObj.transactionsDB = [
+//     { customerId: 1, customerTransactions: [10, 50, -40] },
+//     { customerId: 2, customerTransactions: [10, 10, -10] },
+//     { customerId: 3, customerTransactions: [5, -5, 55] }];
 
 //here we can find the customer using id
 /**
