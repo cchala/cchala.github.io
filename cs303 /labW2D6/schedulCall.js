@@ -56,30 +56,30 @@ for(let j = 0; j < 100000000; j++) {
 
 The i will be the last one: 100000000.
 
- */
-/**
- * 2. Recall the bank question from the first exam. The transactionsDB is publicly accessible to any
-code that has access to the bank object. Write a makeBank function that will encapsulate and
-return the bank object. Make the transactionsDB private by making it a local variable in the
-makeBank function instead of a property on the bank object
- */
-
-// /**
-//  * @return {object} return the object or the banks
 //  */
-// function makeBank() {
-//     const bank = {
-//     transactionsDB: [],
-//     };
-//     return function(){
-//     return bank
-//     };
-//    }
-//    let bankObj = makeBank()();
-//      bankObj.transactionsDB = [
-//     { customerId: 1, customerTransactions: [10, 50, -40] },
-//     { customerId: 2, customerTransactions: [10, 10, -10] },
-//     { customerId: 3, customerTransactions: [5, -5, 55] }];
+// /**
+//  * 2. Recall the bank question from the first exam. The transactionsDB is publicly accessible to any
+// code that has access to the bank object. Write a makeBank function that will encapsulate and
+// return the bank object. Make the transactionsDB private by making it a local variable in the
+// makeBank function instead of a property on the bank object
+//  */
+
+/**
+ * @return {object} return the object or the banks
+ */
+function makeBank() {
+    const bank = {
+    transactionsDB: [],
+    };
+    return function(){
+    return bank
+    };
+   }
+   let bankObj = makeBank()();
+     bankObj.transactionsDB = [
+    { customerId: 1, customerTransactions: [10, 50, -40] },
+    { customerId: 2, customerTransactions: [10, 10, -10] },
+    { customerId: 3, customerTransactions: [5, -5, 55] }];
 
 //here we can find the customer using id
 /**
