@@ -1,30 +1,27 @@
+
+
+"use strict";
+
 function Calculator(){
-    /**
-     * 
-     * @returns{Number} sum;
-     */
-    this.sum=function(){
+    
+}
+Calculator.prototype.setValue=function(a,b){
+    this.a=a;
+    this.b=b;
+}
+    
+     Calculator.prototype.sum=function(){
        return this.a+this.b;
     };
-    /**
-     * 
-     * @returns {Number} multiplication;
-     */
-    this.mul=function(){
+    
+     Calculator.prototype.mul=function(){
         return this.a*this.b;
     }
-    /**
-     * 
-     * @returns {Number} subtraction;
-     */
-    this.sub=function(){
+    
+     Calculator.prototype.sub=function(){
         return this.a-this.b
     }
-    /**
-     * 
-     * @returns {Number} division;
-     */
-    this.div=function(){
+    
+     Calculator.prototype.div=function(){
         return this.a/this.b;
     }
-};  
