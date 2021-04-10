@@ -1,4 +1,6 @@
 "use strict";
+//module.exports = {Accumulator,bicycle,mountainBike,};
+
 /**
  * 
  * @param {*} currentValue 

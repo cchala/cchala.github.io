@@ -1,7 +1,9 @@
 
-
+//module.exports = {Calculator,bicycle};
 "use strict";
-
+/**
+ * constructor
+ */
 function Calculator(){
     
 }
