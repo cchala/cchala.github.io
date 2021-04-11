@@ -35,9 +35,9 @@ Teacher.prototype.initialize=function(name,age){
 Teacher.prototype.teach=function(subject){
     return this.name+ ' is now teaching '+ subject;
 }
-// const chimdi=new Teacher();
-// chimdi.initialize("chimdi",25)
-// console.log(chimdi.teach("chemistry"))
+// const chim=new Teacher();
+// chim.initialize("chimdi",25)
+// console.log(chim.teach("chemistry"))
 
 
 
