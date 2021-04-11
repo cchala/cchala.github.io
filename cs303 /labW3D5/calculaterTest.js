@@ -1,5 +1,5 @@
 
-describe("calculator from constructor function", function () {
+describe("calculator of constructor function", function () {
     let calc;  
     before(function () {
         calc = new Calculator();
