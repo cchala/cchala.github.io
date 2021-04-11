@@ -26,10 +26,11 @@ quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
  * @param {Object} ans2 is an answer object 
  * @returns {number} difference of the identifiers
  */
-function answerComparator(ans1, ans2) {
-//IMPLEMENT THIS
-}
-
+ function answerComparator(ans1, ans2) {
+let sortedAn=quiz.students[0].answers.sort((ans1,ans2)=>ans1.qid>ans2.qid?1:-1)
+return sortedAn
+ }
+ //console.log( answerComparator(ans1.qid,ans2.qid))
 /**
  * 
  * @param {*} sid student id
@@ -39,18 +40,29 @@ function answerComparator(ans1, ans2) {
  * compare them against key and add up matches
  */
 quiz.scoreStudent = function (sid) {
-//IMPLEMENT THIS
+let student=quiz.students.find(stud=>stud.sid===sid)
+let result=student.answers.sort((ans1,ans2)=>ans1.qid>ans2.qid?1:-1)
+let sum=0;
+for(let i=0;i<result.length;i++){
+    if(result[i].ans===quiz.key[i].ans){
+        sum+=1;
+    }
+}
+return sum;
 };
-
+//console.log(quiz.scoreStudent(10))
 /**
  * @returns {number} average score of all students
  * go through list of students and get score of each, then the average
  */
 quiz.getAverage = function(){
-//IMPLEMENT THIS
-
+let sum=0;
+for(let stud of quiz.students){
+    sum+=quiz.scoreStudent(stud.sid)
+}
+return sum/quiz.students.length
 };
-
+//console.log(quiz.getAverage())
 
 
 /* comment out when running in browser */

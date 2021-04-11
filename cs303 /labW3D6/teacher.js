@@ -27,7 +27,20 @@ const john = new Student();
 john.initialize("John", 25);
 console.log(john.learn("Inheritance"));
 
+const Teacher=function(){}
+Teacher.prototype.initialize=function(name,age){
+    this.name=name;
+    this.age=age;
+}
+Teacher.prototype.teach=function(subject){
+    return this.name+ ' is now teaching '+ subject;
+}
+const chimdi=new Teacher();
+chimdi.initialize("chimdi",25)
+console.log(chimdi.teach("chemistry"))
+
+
 
 
 /* comment out when running in browser */
-module.exports = {Teacher, Student}; 
+//module.exports = {Teacher, Student}; 
