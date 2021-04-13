@@ -1,6 +1,7 @@
 "use strict";
 /* global exports */
-/* exports at end of file since exporting an object, which can only be referenced after definition 
+/* exports at end of file since exporting an object,
+ which can only be referenced after definition 
  comment out when running in browser */
 
 
@@ -44,3 +45,5 @@ Teacher.prototype.teach=function(subject){
 
 /* comment out when running in browser */
 //module.exports = {Teacher, Student}; 
+
+/* eslint-disable */
