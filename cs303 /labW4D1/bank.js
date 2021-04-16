@@ -53,7 +53,7 @@ class Bank{
     }
 }
 
-exports.Bank = Bank;
+//exports.Bank = Bank;
  //console.log(Bank.nextNumber)//0
 //  let bank=new Bank()
 //  bank.addAccount()
